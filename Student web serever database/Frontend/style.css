@@ -1,0 +1,124 @@
+/* style.css */
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Layout Container */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Headings */
+h2, h4 {
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Forms */
+form {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+label {
+  display: block;
+  font-weight: 600;
+  margin-top: 15px;
+}
+input,
+select {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin-top: 15px;
+  background-color: #007BFF;
+  color: #fff;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Hidden Utility */
+.hidden {
+  display: none !important;
+}
+
+/* Search Bar */
+#search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+#search-bar input {
+  flex: 1;
+}
+#search-bar button {
+  flex: 0;
+  padding: 10px 20px;
+}
+
+/* Admin Controls */
+#admin-controls {
+  margin-bottom: 20px;
+}
+
+/* Student Table */
+#student-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+#student-table th,
+#student-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+#student-table th {
+  background-color: #007BFF;
+  color: #fff;
+  font-weight: 600;
+}
+#student-table tr:hover td {
+  background-color: #f1f1f1;
+}
+#student-table th:first-child,
+#student-table td:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+#student-table th:last-child,
+#student-table td:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}

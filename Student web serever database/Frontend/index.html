@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student DBMS</title>
+  <!-- Link external stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Registration Form -->
+    <h2>Register</h2>
+    <form id="signup-form">
+      <input type="text" id="signup-username" placeholder="Username" required />
+      <input type="password" id="signup-password" placeholder="Password" required />
+      <label for="signup-role">Role</label>
+      <select id="signup-role">
+        <option value="guest">Guest</option>
+        <option value="admin">Admin</option>
+      </select>
+      <button type="submit">Register</button>
+    </form>
+
+    <!-- Login Form -->
+    <h2>Login</h2>
+    <form id="login-form">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- Main Section: hidden until login -->
+    <section id="student-section" class="hidden">
+      <h2>Student List</h2>
+      <button id="logout-btn">Logout</button>
+
+      <!-- Search Bar -->
+      <div id="search-bar">
+        <input type="text" id="search-input" placeholder="Search by ID, name, or course..." />
+        <button id="search-btn">Search</button>
+      </div>
+
+      <!-- Admin Controls (now always visible) -->
+      <div id="admin-controls">
+        <h3>Admin Panel</h3>
+        <button id="show-add-btn">Add Student</button>
+        <!-- Export button is no longer hidden -->
+        
+        <button id="export-excel-btn">Export Excel</button>
+      </div>
+
+      <!-- Student Table -->
+      <table id="student-table">
+        <thead>
+          <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Birth Date</th>
+            <th>Gender</th>
+            <th>Course</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <!-- Add Student Form -->
+      <form id="add-student-form" class="hidden">
+        <h4>Add Student</h4>
+        <label for="add-student_id">Student ID</label>
+        <input type="text" id="add-student_id" required />
+
+        <label for="add-name">Name</label>
+        <input type="text" id="add-name" required />
+
+        <label for="add-email">Email</label>
+        <input type="email" id="add-email" required />
+
+        <label for="add-phone">Phone</label>
+        <input type="text" id="add-phone" />
+
+        <label for="add-birth_date">Birth Date</label>
+        <input type="date" id="add-birth_date" />
+
+        <label for="add-gender">Gender</label>
+        <select id="add-gender" required>
+          <option value="">Select Gender</option>
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+        </select>
+
+        <label for="add-course">Course</label>
+        <input type="text" id="add-course" required />
+
+        <button type="submit">Add Student</button>
+      </form>
+
+      <!-- Edit Student Form -->
+      <form id="edit-student-form" class="hidden">
+        <h4>Edit Student</h4>
+        <label for="edit-student_id">Student ID</label>
+        <input type="text" id="edit-student_id" readonly />
+
+        <label for="edit-name">Name</label>
+        <input type="text" id="edit-name" required />
+
+        <label for="edit-email">Email</label>
+        <input type="email" id="edit-email" required />
+
+        <label for="edit-phone">Phone</label>
+        <input type="text" id="edit-phone" />
+
+        <label for="edit-birth_date">Birth Date</label>
+        <input type="date" id="edit-birth_date" />
+
+        <label for="edit-gender">Gender</label>
+        <select id="edit-gender" required>
+          <option value="">Select Gender</option>
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+        </select>
+
+        <label for="edit-course">Course</label>
+        <input type="text" id="edit-course" required />
+
+        <button type="submit">Update Student</button>
+      </form>
+
+    </section>
+
+    <!-- Include script -->
+    <script src="script.js"></script>
+  </div> <!-- .container -->
+</body>
+</html>
